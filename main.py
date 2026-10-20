@@ -13,7 +13,7 @@ from aiogram.filters import Command, CommandStart
 from aiogram.types import CallbackQuery, FSInputFile, Message
 from dotenv import load_dotenv
 
-from keyboard import (
+from bot.keyboard import (
     card_kb,
     finale_kb,
     main_menu_kb,
@@ -23,7 +23,7 @@ from keyboard import (
     yandex_map_kb,
 )
 
-from points import (
+from bot.points import (
     ABOUT_TEXT,
     FINAL_SUMMARY,
     MAP_URL,
@@ -34,10 +34,10 @@ from points import (
 )
 
 BASE_DIR = Path(__file__).resolve().parent
-load_dotenv(BASE_DIR / ".env")
+load_dotenv(".env")
 TOKEN = os.environ.get("BOT_TOKEN")
 
-PHOTOS_DIR = BASE_DIR / "img"
+PHOTOS_DIR = BASE_DIR /"bot" / "img"
 STATE_FILE = BASE_DIR / "state.json"
 TOTAL = len(POINTS)
 
