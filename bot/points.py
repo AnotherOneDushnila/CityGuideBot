@@ -2,11 +2,20 @@ ROUTE_TITLE = "Эрзя и мокша в одном городе"
 ROUTE_INTRO = "Маршрут по Саранску о единстве народов Мордовии."
 
 MAP_URL = "https://yandex.ru/maps/42/saransk/?ll=45.178160%2C54.179835&mode=routes&rtext=54.181491%2C45.181560~54.185195%2C45.179702~54.177573%2C45.179874~54.186125%2C45.180141~54.180684%2C45.191836~54.187190%2C45.183848~54.181862%2C45.203838~54.180462%2C45.133794~54.188473%2C45.180540~54.180899%2C45.183552&rtt=auto&ruri=ymapsbm1%3A%2F%2Forg%3Foid%3D1118661571~ymapsbm1%3A%2F%2Forg%3Foid%3D1005143253~ymapsbm1%3A%2F%2Forg%3Foid%3D1104820333~ymapsbm1%3A%2F%2Forg%3Foid%3D1211218213~ymapsbm1%3A%2F%2Forg%3Foid%3D1072996893~~ymapsbm1%3A%2F%2Forg%3Foid%3D140121004362~~ymapsbm1%3A%2F%2Forg%3Foid%3D1022177483~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM4NTQ0EmDQoNC-0YHRgdC40Y8sINCg0LXRgdC_0YPQsdC70LjQutCwINCc0L7RgNC00L7QstC40Y8sINCh0LDRgNCw0L3RgdC6LCDQv9C70L7RidCw0LTRjCDQn9C-0LHQtdC00YsiCg31uzRCFT65WEI%2C&z=13.67"
+FOOD_MAP_URL = "https://yandex.ru/maps/42/saransk/?ll=45.192566%2C54.183753&mode=routes&rtext=54.180169%2C45.177528~54.184830%2C45.183103~54.178300%2C45.177739~54.186640%2C45.175231~54.180704%2C45.190137~54.186310%2C45.182136~54.182554%2C45.203710~54.187907%2C45.181477&rtt=auto&ruri=ymapsbm1%3A%2F%2Forg%3Foid%3D190869082810~~ymapsbm1%3A%2F%2Forg%3Foid%3D1222716823~ymapsbm1%3A%2F%2Forg%3Foid%3D132764792137~~ymapsbm1%3A%2F%2Forg%3Foid%3D36061801798~~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQ4MzE2MxJw0KDQvtGB0YHQuNGPLCDQoNC10YHQv9GD0LHQu9C40LrQsCDQnNC-0YDQtNC-0LLQuNGPLCDQodCw0YDQsNC90YHQuiwg0JHQvtC70YzRiNC10LLQuNGB0YLRgdC60LDRjyDRg9C70LjRhtCwLCA2OCIKDdW5NEIVa8BYQg%2C%2C&z=14.66"
 
 ABOUT_TEXT = (
     "Авторы: Гений, Миллиардер, Плейбой\n"
     "Название проекта: «Эрзя и мокша в одном городе»\n\n"
     "Карта нужна, чтобы увидеть маршрут целиком."
+
+    "Команды:\n"
+    "/start — начать маршрут\n"
+    "/route — начать маршрут с текущей точки\n"
+    "/progress — посмотреть, какие точки уже пройдены\n"
+    "/map — открыть карту маршрута\n"
+    "/food_map — открыть карту мест для еды\n"
+    "/about — прочитать о проекте\n"
 )
 
 FINAL_SUMMARY = (

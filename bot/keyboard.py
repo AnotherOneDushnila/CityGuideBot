@@ -14,6 +14,7 @@ def main_menu_kb() -> InlineKeyboardMarkup:
     return _kb(
         [_btn("Начать маршрут", "route")],
         [_btn("Карта", "map")],
+        [_btn("Где поесть?", "food_map")],
         [_btn("О проекте", "about")],
     )
 

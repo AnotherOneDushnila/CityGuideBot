@@ -1,9 +1,7 @@
 {
   "504786590": {
-    "current": 9,
-    "visited": [
-      0
-    ],
+    "current": 0,
+    "visited": [],
     "quiz_score": 0,
     "quiz_next": 0
   }

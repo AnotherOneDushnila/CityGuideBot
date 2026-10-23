@@ -31,6 +31,7 @@ from bot.points import (
     QUIZ,
     ROUTE_INTRO,
     ROUTE_TITLE,
+    FOOD_MAP_URL,
 )
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -108,6 +109,13 @@ async def send_map(bot: Bot, chat_id: int) -> None:
         reply_markup=map_kb(MAP_URL),
     )
 
+async def send_food_map(bot: Bot, chat_id: int) -> None:
+    await bot.send_message(
+        chat_id,
+        "Карта мест для еды:",
+        reply_markup=map_kb(FOOD_MAP_URL),
+    )
+
 
 async def send_progress(bot: Bot, chat_id: int) -> None:
     visited = set(get_user(chat_id)["visited"])
@@ -157,6 +165,11 @@ async def cmd_map(message: Message, bot: Bot) -> None:
     await send_map(bot, message.chat.id)
 
 
+@dp.message(Command("food_map"))
+async def cmd_food_map(message: Message, bot: Bot) -> None:
+    await send_food_map(bot, message.chat.id)
+
+
 @dp.message(Command("about"))
 async def cmd_about(message: Message) -> None:
     await message.answer(html.quote(ABOUT_TEXT))
@@ -177,10 +190,16 @@ async def cb_route(cb: CallbackQuery, bot: Bot) -> None:
     await send_card(bot, chat_id, get_user(chat_id)["current"])
 
 
+@dp.callback_query(F.data == "food_map")
+async def cb_food_map(cb: CallbackQuery, bot: Bot) -> None:
+    await cb.answer()
+    await send_food_map(bot, cb.message.chat.id)
+
+
 @dp.callback_query(F.data == "map")
 async def cb_map(cb: CallbackQuery, bot: Bot) -> None:
     await cb.answer()
-    await send_map(bot, cb.message.chat.id)
+    await send_map(bot, cb.message.chat.id)  
 
 
 @dp.callback_query(F.data == "about")
